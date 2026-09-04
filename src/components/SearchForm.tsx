@@ -31,7 +31,7 @@ export const SearchForm = () => {
     return (
         <form
             onSubmit={handleSubmit(SearchUser)}
-            className="space-y-5">
+            className="w-1/2 p-3">
             <div className="relative flex items-center px-2 bg-white">
                 <label
                     htmlFor="handle"

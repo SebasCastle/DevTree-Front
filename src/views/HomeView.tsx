@@ -12,7 +12,7 @@ export const HomeView = () => {
             Todas tus <span className ="text-green-400"> Redes sociales </span>
             en un enlace
           </h1>
-          <p className = "text-xl text-slate-800">
+          <p className = "pt-4 text-xl text-slate-800">
             Únete a más de 200 mil usuarios que ya están usando DevTree para compartir sus redes sociales y contenido en un solo lugar.
           </p>
           </div>
