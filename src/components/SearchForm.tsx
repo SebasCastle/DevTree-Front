@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form"
 import slugify from "react-slugify"
-import { ErrorMessage } from "./errorMessage"
 import { useMutation } from "@tanstack/react-query"
 import { searchByHandle } from "../api/DevTreeApi"
 import { Link } from "react-router-dom"
@@ -9,7 +8,7 @@ import { Link } from "react-router-dom"
 
 export const SearchForm = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit, watch } = useForm({
         defaultValues:{
             handle: ""
         }
