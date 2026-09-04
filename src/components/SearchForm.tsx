@@ -26,13 +26,12 @@ export const SearchForm = () => {
         const slug = slugify(handle)
         mutation.mutate(slug)
     }
-    console.log(mutation)
 
     return (
         <form
             onSubmit={handleSubmit(SearchUser)}
-            className="w-1/2 p-3">
-            <div className="relative flex items-center px-2 bg-white">
+            className="w-1/2 p-3 m-auto lg:m-0 max-[425px]:m-0">
+            <div className="relative flex items-center px-2 mt-10 bg-white ">
                 <label
                     htmlFor="handle"
                 >devtree.com/</label>
@@ -47,11 +46,7 @@ export const SearchForm = () => {
                 />
 
             </div>
-            {errors.handle && (
-                <ErrorMessage>{errors.handle.message}</ErrorMessage>
-            )}
-
-            <div className="mt-10">
+            <div className="m-5 backdrop:blur-sm">
                 {mutation.isPending && <p className="text-center">Cargando...</p>}
                 {mutation.error && <p className="font-black text-center text-red-600">{mutation.error.message}</p>}
                 {mutation.data && <p className="font-black text-center text-cyan-600">{mutation.data} ir a <Link to={`/auth/register`} state={{ handle: slugify(handle) }}>Registrar</Link></p>}
@@ -60,7 +55,7 @@ export const SearchForm = () => {
 
             <input
                 type="submit"
-                className="w-full p-3 text-lg font-bold uppercase rounded-lg cursor-pointer bg-cyan-400 text-slate-600"
+                className="w-full p-3 text-lg font-bold uppercase rounded-lg cursor-pointer bg-cyan-400 text-slate-600 max-[485px]:text-sm"
                 value='Obtener mi DevTree'
             />
         </form>
