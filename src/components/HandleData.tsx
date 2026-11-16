@@ -26,7 +26,7 @@ export const HandleData = ( {data} : HandleDataProps) => {
             target="_blank"
             rel="noreferrer noopener"
             >
-                <img  src={`../../public/social/${link.name}.svg`} alt="red social" className="w-12"/>
+                <img  src={`social/${link.name}.svg`} alt="red social" className="w-12"/>
                <p className="text-lg font-bold text-black capitalize">Visita mi:{link.name}</p> 
             </a>
             ))
